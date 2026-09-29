@@ -10,4 +10,4 @@ const productionHeaders = {
 
 const developmentHeaders = { ...productionHeaders, 'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'" };
 
-export default defineConfig({ plugins: [react()], server: { headers: developmentHeaders }, preview: { headers: productionHeaders } });
+export default defineConfig({ base: '/VoltCalc/', plugins: [react()], server: { headers: developmentHeaders }, preview: { headers: productionHeaders } });
